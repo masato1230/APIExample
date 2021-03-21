@@ -1,5 +1,3 @@
-import json
-
 import requests
 
 # ご自身のAPIキーを入れてください
@@ -19,7 +17,8 @@ def get_by_securities(securities_code: str):
     res = requests.get(url, headers=headers)
     return res.json()
 
+
 if __name__ == '__main__':
-    
+
     data = get_by_securities('7203')
     print(data)
